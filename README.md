@@ -26,4 +26,8 @@ The repository also has a `DockerfileExample` which is helpful for deployment if
 
 You can contact me on [LinkedIn](https://linkedin.com/in/deepanshkhurana) or through email `deepanshkhurana[at]outlook[dot]com`.
 
+## Addendum
+
+Pavel Demin [(@Gotfrid)](https://github.com/Gotfrid) created [this wonderful cookbook](https://github.com/Gotfrid/plumber-cookbook) that is a really good place to start as boilerplate for your own API.
+
 
