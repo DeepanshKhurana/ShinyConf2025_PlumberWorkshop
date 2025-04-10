@@ -35,7 +35,7 @@ get_airport_delays <- function(min_flights = 200) {
 get_daily_volume <- function(origin = NULL) {
   data <- flights
   if (!is.null(origin)) {
-    data <- filter(data, origin == origin)
+    data <- filter(data, origin == {{ origin }})
   }
 
   data |>
@@ -50,7 +50,7 @@ get_daily_volume <- function(origin = NULL) {
 # 4. Top destination airports from an origin
 get_top_destinations <- function(origin = "JFK", top_n = 5) {
   flights |>
-    filter(origin == origin) |>
+    filter(origin == {{ origin }}) |>
     count(dest, sort = TRUE) |>
     top_n(top_n, wt = n) |>
     left_join(airports, by = c("dest" = "faa")) |>
